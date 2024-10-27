@@ -14,5 +14,5 @@ public class RepositoryContext : DbContext
         modelBuilder.ApplyConfiguration(new OrderConfiguration());
     }
 
-    public DbSet<Order> Oreders { get; set; }
+    public DbSet<Order> Orders { get; set; }
 }

@@ -21,26 +21,26 @@ namespace Entities
                     {
                         OrderId = new Guid("cfa59f16-d6f9-4d8a-b97a-9aeec74de704"),
                         CityDistrict = "Центральный",
-                        CustomerIpAddress = "185.168.20.22",
-                        OrderTime = new DateTime(2024, 10, 22, 17, 08, 12),
+                       
+                        
                         DeliveryTime = new DateTime(2024, 10, 22, 17, 38, 12),
                         OrderWeight = 12
                     },
                     new Order
                     {
                         OrderId = new Guid("cfa59f16-d6f9-4d8a-b97a-9aeec74de111"),
-                        CityDistrict = "Центральный",
-                        CustomerIpAddress = "185.168.20.221",
-                        OrderTime = new DateTime(2024, 11, 22, 17, 08, 12),
+                        CityDistrict = "Северный",
+                       
+                       
                         DeliveryTime = new DateTime(2024, 11, 22, 17, 38, 12),
                         OrderWeight = 12
                     },
                     new Order
                     {
                         OrderId = new Guid("cfa59f16-d6f9-4d8a-b97a-9aeec74de112"),
-                        CityDistrict = "Центральный",
-                        CustomerIpAddress = "185.168.20.221",
-                        OrderTime = new DateTime(2024, 11, 23, 17, 08, 12),
+                        CityDistrict = "Восточный",
+                        
+                        
                         DeliveryTime = new DateTime(2024, 11, 23, 17, 38, 12),
                         OrderWeight = 12
                     },
@@ -48,8 +48,8 @@ namespace Entities
                     {
                         OrderId = new Guid("cfa59f16-d6f9-4d8a-b97a-9aeec74de113"),
                         CityDistrict = "Центральный",
-                        CustomerIpAddress = "185.168.20.221",
-                        OrderTime = new DateTime(2024, 11, 24, 17, 08, 12),
+                       
+                      
                         DeliveryTime = new DateTime(2024, 11, 24, 17, 38, 12),
                         OrderWeight = 12
                     },
@@ -57,8 +57,8 @@ namespace Entities
                     {
                         OrderId = new Guid("cfa59f16-d6f9-4d8a-b97a-9aeec74de114"),
                         CityDistrict = "Центральный",
-                        CustomerIpAddress = "185.168.20.221",
-                        OrderTime = new DateTime(2024, 11, 25, 17, 08, 12),
+                       
+                        
                         DeliveryTime = new DateTime(2024, 11, 25, 17, 38, 12),
                         OrderWeight = 12
                     },
@@ -66,8 +66,8 @@ namespace Entities
                     {
                         OrderId = new Guid("cfa59f16-d6f9-4d8a-b97a-9aeec74de115"),
                         CityDistrict = "Центральный",
-                        CustomerIpAddress = "185.168.20.221",
-                        OrderTime = new DateTime(2024, 11, 26, 17, 08, 12),
+                        
+                       
                         DeliveryTime = new DateTime(2024, 11, 26, 17, 38, 12),
                         OrderWeight = 12
                     }

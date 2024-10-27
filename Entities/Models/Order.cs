@@ -16,22 +16,15 @@ namespace Entities.Models
         
         
         
-        public string CustomerIpAddress { get; set; }
-
-        
         public int OrderWeight { get; set; }
 
 
         
         public string CityDistrict { get; set; }
 
-        public DateTime OrderTime { get; set; }
-
+        
         public DateTime DeliveryTime { get; set; }
 
-        [ForeignKey(nameof(FilteredOrder))]
-        public Guid RequestId { get; set; }
 
-        public FilteredOrder FilteredOrder { get; set; }
     }
 }

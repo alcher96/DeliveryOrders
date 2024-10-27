@@ -1,7 +1,10 @@
-﻿using AutoMapper;
+﻿
+using System.Xml;
+using AutoMapper;
 using Contracts;
 using Entities.DTOs;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace FilterToDelivery.Controllers
 {
@@ -11,6 +14,7 @@ namespace FilterToDelivery.Controllers
     {
         private readonly IRepositoryManager _repository;
         private readonly IMapper _mapper;
+        
 
         public FilteredOrdersController(IRepositoryManager repository,IMapper mapper)
         {
@@ -21,11 +25,11 @@ namespace FilterToDelivery.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> GetFilteredOrders(DateTime starDateTime, DateTime endDateTime)
+        public async Task<IActionResult> GetFilteredOrders(DateTime firstDeliveryDateTime, string CityDistrict)
         {
-            var orders = await _repository.Order.GetFilteredOrdersAsync(starDateTime, endDateTime);
+            var orders = await _repository.Order.GetOrdersFilteredAsync(firstDeliveryDateTime, CityDistrict,trackChanges:false);
             var ordersDto = _mapper.Map<IEnumerable<OrderDto>>(orders);
-
+            await _repository.Order.WriteDataList("data.txt", orders);
             //var ordersDto = orders.Select(o => new OrderDto
             //{
             //    orderId = o.OrderId,

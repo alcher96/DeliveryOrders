@@ -8,10 +8,7 @@ public class MappingProfile: Profile
 {
     public MappingProfile()
     {
-        CreateMap<Order, OrderDto>()
-            .ForMember(x=>x.DeliveryTime,
-                opt=>
-                    opt.MapFrom(c=>c.OrderTime.AddMinutes(30)));
+        CreateMap<Order, OrderDto>();
 
         CreateMap<OrderForCreationDto, Order>();
     }

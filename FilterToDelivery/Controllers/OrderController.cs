@@ -15,12 +15,14 @@ namespace FilterToDelivery.Controllers
 
         private readonly IRepositoryManager _repository;
         private readonly IMapper _mapper;
+        private readonly ILoggerManager _logger;
 
 
-        public OrderController(IRepositoryManager repository, IMapper mapper)
+        public OrderController(IRepositoryManager repository, IMapper mapper, ILoggerManager logger)
         {
             _repository = repository;
             _mapper = mapper;
+            _logger = logger;
         }
 
 
@@ -34,17 +36,7 @@ namespace FilterToDelivery.Controllers
         {
             var orders = await _repository.Order.GetAllOrdersAsync();
             var ordersDto = _mapper.Map<IEnumerable<OrderDto>>(orders);
-
-            //var ordersDto = orders.Select(o => new OrderDto
-            //{
-            //    orderId = o.OrderId,
-            //    CityDistrict = o.CityDistrict,
-            //    CustomerIpAddress = o.CustomerIpAddress,
-            //    DeliveryTime = o.DeliveryTime,
-            //    OrderTime = o.OrderTime,
-            //    OrderWeight = o.OrderWeight
-            //}).ToList();
-
+            
             return Ok(ordersDto);
 
 
@@ -65,8 +57,16 @@ namespace FilterToDelivery.Controllers
             return Ok(orderToReturn);
         }
 
+        [HttpDelete("{orderId}")]
+        public async Task<IActionResult> DeleteOrder(Guid orderId)
+        {
+            var order =await _repository.Order.GetOrderAsync(orderId, false);
+            
+            _repository.Order.DeleteOrder(order);
+            await _repository.SaveAsync();
+            return NoContent();
+        }
 
-      
 
 
 

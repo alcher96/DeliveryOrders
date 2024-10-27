@@ -646,6 +646,50 @@
           "lib/netstandard2.0/Mono.TextTemplating.dll": {}
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NLog/5.3.4": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NLog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NLog.Extensions.Logging/5.3.14": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "NLog": "5.3.4"
+        },
+        "compile": {
+          "lib/net8.0/NLog.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/NLog.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.1.6": {
         "type": "package",
         "dependencies": {
@@ -1089,13 +1133,28 @@
           "bin/placeholder/Entities.dll": {}
         }
       },
+      "LoggerService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Contracts": "1.0.0",
+          "NLog.Extensions.Logging": "5.3.14"
+        },
+        "compile": {
+          "bin/placeholder/LoggerService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LoggerService.dll": {}
+        }
+      },
       "Repository/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Contracts": "1.0.0",
           "Entities": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "8.0.10"
+          "Microsoft.EntityFrameworkCore": "8.0.10",
+          "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
           "bin/placeholder/Repository.dll": {}
@@ -2137,6 +2196,87 @@
         "mono.texttemplating.nuspec"
       ]
     },
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "NLog/5.3.4": {
+      "sha512": "gLy7+O1hEYJXIlcTr1/VWjGXrZTQFZzYNO18IWasD64pNwz0BreV+nHLxWKXWZzERRzoKnsk2XYtwLkTVk7J1A==",
+      "type": "package",
+      "path": "nlog/5.3.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "N.png",
+        "lib/net35/NLog.dll",
+        "lib/net35/NLog.xml",
+        "lib/net45/NLog.dll",
+        "lib/net45/NLog.xml",
+        "lib/net46/NLog.dll",
+        "lib/net46/NLog.xml",
+        "lib/netstandard1.3/NLog.dll",
+        "lib/netstandard1.3/NLog.xml",
+        "lib/netstandard1.5/NLog.dll",
+        "lib/netstandard1.5/NLog.xml",
+        "lib/netstandard2.0/NLog.dll",
+        "lib/netstandard2.0/NLog.xml",
+        "nlog.5.3.4.nupkg.sha512",
+        "nlog.nuspec"
+      ]
+    },
+    "NLog.Extensions.Logging/5.3.14": {
+      "sha512": "ZFcdwdIYcGvWY268QMw2lIqnE8ziJTaS4iLm2ajRMUdgy9MFxJl+Y5s0zQxfgjTxbownGrAkJfoTkquAayKG6A==",
+      "type": "package",
+      "path": "nlog.extensions.logging/5.3.14",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "N.png",
+        "README.md",
+        "lib/net461/NLog.Extensions.Logging.dll",
+        "lib/net461/NLog.Extensions.Logging.xml",
+        "lib/net6.0/NLog.Extensions.Logging.dll",
+        "lib/net6.0/NLog.Extensions.Logging.xml",
+        "lib/net8.0/NLog.Extensions.Logging.dll",
+        "lib/net8.0/NLog.Extensions.Logging.xml",
+        "lib/netstandard1.3/NLog.Extensions.Logging.dll",
+        "lib/netstandard1.3/NLog.Extensions.Logging.xml",
+        "lib/netstandard1.5/NLog.Extensions.Logging.dll",
+        "lib/netstandard1.5/NLog.Extensions.Logging.xml",
+        "lib/netstandard2.0/NLog.Extensions.Logging.dll",
+        "lib/netstandard2.0/NLog.Extensions.Logging.xml",
+        "lib/netstandard2.1/NLog.Extensions.Logging.dll",
+        "lib/netstandard2.1/NLog.Extensions.Logging.xml",
+        "nlog.extensions.logging.5.3.14.nupkg.sha512",
+        "nlog.extensions.logging.nuspec"
+      ]
+    },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.6": {
       "sha512": "BmAf6XWt4TqtowmiWe4/5rRot6GerAeklmOPfviOvwLoF5WwgxcJHAxZtySuyW9r9w+HLILnm8VfJFLCUJYW8A==",
       "type": "package",
@@ -2662,6 +2802,11 @@
       "path": "../Entities/Entities.csproj",
       "msbuildProject": "../Entities/Entities.csproj"
     },
+    "LoggerService/1.0.0": {
+      "type": "project",
+      "path": "../LoggerService/LoggerService.csproj",
+      "msbuildProject": "../LoggerService/LoggerService.csproj"
+    },
     "Repository/1.0.0": {
       "type": "project",
       "path": "../Repository/Repository.csproj",
@@ -2673,10 +2818,13 @@
       "AutoMapper >= 13.0.1",
       "Contracts >= 1.0.0",
       "Entities >= 1.0.0",
+      "LoggerService >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.10",
+      "NLog >= 5.3.4",
+      "Newtonsoft.Json >= 13.0.3",
       "Repository >= 1.0.0",
       "Swashbuckle.AspNetCore.Swagger >= 6.9.0",
       "Swashbuckle.AspNetCore.SwaggerGen >= 6.9.0",
@@ -2684,24 +2832,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alex\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\alche\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alex\\source\\repos\\FilterToDelivery\\FilterToDelivery\\FilterToDelivery.csproj",
+      "projectUniqueName": "C:\\gitRepos\\DeliveryOrders\\FilterToDelivery\\FilterToDelivery.csproj",
       "projectName": "FilterToDelivery",
-      "projectPath": "C:\\Users\\Alex\\source\\repos\\FilterToDelivery\\FilterToDelivery\\FilterToDelivery.csproj",
-      "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alex\\source\\repos\\FilterToDelivery\\FilterToDelivery\\obj\\",
+      "projectPath": "C:\\gitRepos\\DeliveryOrders\\FilterToDelivery\\FilterToDelivery.csproj",
+      "packagesPath": "C:\\Users\\alche\\.nuget\\packages\\",
+      "outputPath": "C:\\gitRepos\\DeliveryOrders\\FilterToDelivery\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\alche\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2716,14 +2859,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Alex\\source\\repos\\FilterToDelivery\\Contracts\\Contracts.csproj": {
-              "projectPath": "C:\\Users\\Alex\\source\\repos\\FilterToDelivery\\Contracts\\Contracts.csproj"
+            "C:\\gitRepos\\DeliveryOrders\\Contracts\\Contracts.csproj": {
+              "projectPath": "C:\\gitRepos\\DeliveryOrders\\Contracts\\Contracts.csproj"
             },
-            "C:\\Users\\Alex\\source\\repos\\FilterToDelivery\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\Alex\\source\\repos\\FilterToDelivery\\Entities\\Entities.csproj"
+            "C:\\gitRepos\\DeliveryOrders\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\gitRepos\\DeliveryOrders\\Entities\\Entities.csproj"
             },
-            "C:\\Users\\Alex\\source\\repos\\FilterToDelivery\\Repository\\Repository.csproj": {
-              "projectPath": "C:\\Users\\Alex\\source\\repos\\FilterToDelivery\\Repository\\Repository.csproj"
+            "C:\\gitRepos\\DeliveryOrders\\LoggerService\\LoggerService.csproj": {
+              "projectPath": "C:\\gitRepos\\DeliveryOrders\\LoggerService\\LoggerService.csproj"
+            },
+            "C:\\gitRepos\\DeliveryOrders\\Repository\\Repository.csproj": {
+              "projectPath": "C:\\gitRepos\\DeliveryOrders\\Repository\\Repository.csproj"
             }
           }
         }
@@ -2767,6 +2913,14 @@
             "target": "Package",
             "version": "[8.0.10, )"
           },
+          "NLog": {
+            "target": "Package",
+            "version": "[5.3.4, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
+          },
           "Swashbuckle.AspNetCore.Swagger": {
             "target": "Package",
             "version": "[6.9.0, )"
@@ -2799,7 +2953,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

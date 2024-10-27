@@ -28,14 +28,7 @@ namespace FilterToDelivery.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("CustomerIpAddress")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<DateTime>("DeliveryTime")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("OrderTime")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("OrderWeight")
@@ -43,7 +36,51 @@ namespace FilterToDelivery.Migrations
 
                     b.HasKey("OrderId");
 
-                    b.ToTable("Oreders");
+                    b.ToTable("Orders");
+
+                    b.HasData(
+                        new
+                        {
+                            OrderId = new Guid("cfa59f16-d6f9-4d8a-b97a-9aeec74de704"),
+                            CityDistrict = "Центральный",
+                            DeliveryTime = new DateTime(2024, 10, 22, 17, 38, 12, 0, DateTimeKind.Unspecified),
+                            OrderWeight = 12
+                        },
+                        new
+                        {
+                            OrderId = new Guid("cfa59f16-d6f9-4d8a-b97a-9aeec74de111"),
+                            CityDistrict = "Северный",
+                            DeliveryTime = new DateTime(2024, 11, 22, 17, 38, 12, 0, DateTimeKind.Unspecified),
+                            OrderWeight = 12
+                        },
+                        new
+                        {
+                            OrderId = new Guid("cfa59f16-d6f9-4d8a-b97a-9aeec74de112"),
+                            CityDistrict = "Восточный",
+                            DeliveryTime = new DateTime(2024, 11, 23, 17, 38, 12, 0, DateTimeKind.Unspecified),
+                            OrderWeight = 12
+                        },
+                        new
+                        {
+                            OrderId = new Guid("cfa59f16-d6f9-4d8a-b97a-9aeec74de113"),
+                            CityDistrict = "Центральный",
+                            DeliveryTime = new DateTime(2024, 11, 24, 17, 38, 12, 0, DateTimeKind.Unspecified),
+                            OrderWeight = 12
+                        },
+                        new
+                        {
+                            OrderId = new Guid("cfa59f16-d6f9-4d8a-b97a-9aeec74de114"),
+                            CityDistrict = "Центральный",
+                            DeliveryTime = new DateTime(2024, 11, 25, 17, 38, 12, 0, DateTimeKind.Unspecified),
+                            OrderWeight = 12
+                        },
+                        new
+                        {
+                            OrderId = new Guid("cfa59f16-d6f9-4d8a-b97a-9aeec74de115"),
+                            CityDistrict = "Центральный",
+                            DeliveryTime = new DateTime(2024, 11, 26, 17, 38, 12, 0, DateTimeKind.Unspecified),
+                            OrderWeight = 12
+                        });
                 });
 #pragma warning restore 612, 618
         }
