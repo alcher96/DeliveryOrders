@@ -285,3 +285,10 @@ C:\gitRepos\DeliveryOrders\FilterToDelivery\bin\Debug\net8.0\NLog.Extensions.Log
 C:\gitRepos\DeliveryOrders\FilterToDelivery\bin\Debug\net8.0\LoggerService.dll
 C:\gitRepos\DeliveryOrders\FilterToDelivery\bin\Debug\net8.0\LoggerService.pdb
 C:\gitRepos\DeliveryOrders\FilterToDelivery\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Alex\source\repos\FilterToDelivery\FilterToDelivery\bin\Debug\net8.0\nlog.config
+C:\Users\Alex\source\repos\FilterToDelivery\FilterToDelivery\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Alex\source\repos\FilterToDelivery\FilterToDelivery\bin\Debug\net8.0\NLog.dll
+C:\Users\Alex\source\repos\FilterToDelivery\FilterToDelivery\bin\Debug\net8.0\NLog.Extensions.Logging.dll
+C:\Users\Alex\source\repos\FilterToDelivery\FilterToDelivery\bin\Debug\net8.0\LoggerService.dll
+C:\Users\Alex\source\repos\FilterToDelivery\FilterToDelivery\bin\Debug\net8.0\LoggerService.pdb
+C:\Users\Alex\source\repos\FilterToDelivery\FilterToDelivery\obj\Debug\net8.0\FilterToDelivery.sourcelink.json

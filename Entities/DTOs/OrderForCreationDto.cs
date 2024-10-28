@@ -13,6 +13,7 @@ public class OrderForCreationDto
     [Required(ErrorMessage = "District is a required field")]
     public string CityDistrict { get; set; }
 
+    [Required(ErrorMessage = "The Date field is required.")]
     public DateTime DeliveryTime { get; set; }
     
 

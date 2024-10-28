@@ -14,17 +14,10 @@ namespace Entities.Models
         [Column("OrderId")]
         public Guid OrderId { get; set; }
         
-        
-        
         public int OrderWeight { get; set; }
-
-
         
         public string CityDistrict { get; set; }
-
-        
         public DateTime DeliveryTime { get; set; }
-
-
+        
     }
 }

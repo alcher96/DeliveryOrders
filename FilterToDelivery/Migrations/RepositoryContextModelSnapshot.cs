@@ -80,6 +80,20 @@ namespace FilterToDelivery.Migrations
                             CityDistrict = "Центральный",
                             DeliveryTime = new DateTime(2024, 11, 26, 17, 38, 12, 0, DateTimeKind.Unspecified),
                             OrderWeight = 12
+                        },
+                        new
+                        {
+                            OrderId = new Guid("78e03122-7e4e-44f0-ad11-5fe56a2669dd"),
+                            CityDistrict = "Западный",
+                            DeliveryTime = new DateTime(2024, 10, 22, 17, 38, 12, 0, DateTimeKind.Unspecified),
+                            OrderWeight = 15
+                        },
+                        new
+                        {
+                            OrderId = new Guid("4978799c-f114-46a0-bf6e-21d14e5c5bff"),
+                            CityDistrict = "Западный",
+                            DeliveryTime = new DateTime(2024, 10, 26, 17, 28, 12, 0, DateTimeKind.Unspecified),
+                            OrderWeight = 16
                         });
                 });
 #pragma warning restore 612, 618

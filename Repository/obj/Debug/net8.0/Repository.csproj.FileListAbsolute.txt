@@ -33,3 +33,4 @@ C:\gitRepos\DeliveryOrders\Repository\obj\Debug\net8.0\Repository.dll
 C:\gitRepos\DeliveryOrders\Repository\obj\Debug\net8.0\refint\Repository.dll
 C:\gitRepos\DeliveryOrders\Repository\obj\Debug\net8.0\Repository.pdb
 C:\gitRepos\DeliveryOrders\Repository\obj\Debug\net8.0\ref\Repository.dll
+C:\Users\Alex\source\repos\FilterToDelivery\Repository\obj\Debug\net8.0\Repository.sourcelink.json

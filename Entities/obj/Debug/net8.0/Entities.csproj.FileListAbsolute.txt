@@ -27,3 +27,4 @@ C:\gitRepos\DeliveryOrders\Entities\obj\Debug\net8.0\refint\Entities.dll
 C:\gitRepos\DeliveryOrders\Entities\obj\Debug\net8.0\Entities.pdb
 C:\gitRepos\DeliveryOrders\Entities\obj\Debug\net8.0\Entities.genruntimeconfig.cache
 C:\gitRepos\DeliveryOrders\Entities\obj\Debug\net8.0\ref\Entities.dll
+C:\Users\Alex\source\repos\FilterToDelivery\Entities\obj\Debug\net8.0\Entities.sourcelink.json
