@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "12642409-c794-4727-a76e-cb522c4e66ff",
+		"name": "FilterToDelivery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37446292"
+	},
+	"item": [
+		{
+			"name": "GetAllOrders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7146/api/orders",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7146",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"orderWeight\": 22,\r\n  \"cityDistrict\": \"Центральный\",\r\n  \"deliveryTime\": \"2023-12-20T14:34:22\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7146/api/orders",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7146",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteOrder",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://localhost:7146/api/orders/89f3be35-f1ee-48f6-a2d6-d1b56e046d5e",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7146",
+					"path": [
+						"api",
+						"orders",
+						"89f3be35-f1ee-48f6-a2d6-d1b56e046d5e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetFillteredOrders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7146/api/filteredOrders?firstDeliveryDateTime=2024-10-22T17:28:12&CityDistrict=Западный",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7146",
+					"path": [
+						"api",
+						"filteredOrders"
+					],
+					"query": [
+						{
+							"key": "firstDeliveryDateTime",
+							"value": "2024-10-22T17:28:12"
+						},
+						{
+							"key": "CityDistrict",
+							"value": "Западный"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
